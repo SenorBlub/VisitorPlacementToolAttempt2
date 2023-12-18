@@ -115,13 +115,15 @@ namespace VisitorPlacementToolTests
         public void CheckSignUpDatesTest()
         {
             // Arrange
+            List<Visitor> visitors = makeGenericGrouplessAdultVisitors(5);
+            visitors.AddRange(ChangeSignDate(makeGenericGrouplessAdultVisitors(5), DateOnly.MinValue));
             Event expectedEvent = new Event()
             {
-
+                Visitors = makeGenericGrouplessAdultVisitors(5)
             };
             Event inputEvent = new Event()
             {
-
+                Visitors = visitors
             };
 
             // Act
@@ -134,14 +136,16 @@ namespace VisitorPlacementToolTests
         [Fact]
         public void CheckAgesAtTimeOfEventTest()
         {
+            List<Visitor> visitors = makeGenericGrouplessAdultVisitors(5);
+            visitors.AddRange(makeGenericGrouplessChildVisitors(5));
             // Arrange
             Event expectedEvent = new Event()
             {
-
+                Visitors = makeGenericGrouplessAdultVisitors(5)
             };
             Event inputEvent = new Event()
             {
-
+                Visitors = visitors
             };
 
             // Act
@@ -152,7 +156,7 @@ namespace VisitorPlacementToolTests
         }
 
         [Fact]
-        public void PlaceGroupsTest()
+        public void PlaceGroupsTest() // TODO harder than rest
         {
             // Arrange
             Event expectedEvent = new Event()
@@ -172,7 +176,7 @@ namespace VisitorPlacementToolTests
         }
 
         [Fact]
-        public void PlaceChildrenInFrontTest()
+        public void PlaceChildrenInFrontTest() // TODO harder than rest
         {
             // Arrange
             Event expectedEvent = new Event()
@@ -192,7 +196,7 @@ namespace VisitorPlacementToolTests
         }
 
         [Fact]
-        public void PlaceChildrenWithAdultsTest()
+        public void PlaceChildrenWithAdultsTest() // TODO harder than rest
         {
             // Arrange
             Event expectedEvent = new Event()
