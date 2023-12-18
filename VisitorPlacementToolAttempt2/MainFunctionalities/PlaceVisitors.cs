@@ -70,7 +70,7 @@ public class PlaceVisitors
     //TODO split groups that don't fit and place the split groups
     public Event SplitGroupsThatDoNotFit(Event eEvent)
     {
-        return eEvent;
+        return BinPackingAlgorithmHolder_So_I_Dont_Forget_.SplitLargeGroups(eEvent);
     }
 
 }
