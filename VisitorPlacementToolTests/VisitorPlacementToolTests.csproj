@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VisitorPlacementToolAttempt2\VisitorPlacementToolAttempt2.csproj" />
+  </ItemGroup>
+
 </Project>
