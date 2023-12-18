@@ -7,6 +7,5 @@ public class Row
     public Row(List<Visitor> visitors)
     {
         Visitors = visitors;
-        //TODO make fields with random sizes within the maximum capacity
     }
 }

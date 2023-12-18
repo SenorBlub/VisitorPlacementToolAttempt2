@@ -9,6 +9,5 @@ public class Field
     public Field(List<Row> rows)
     {
         Rows = rows;
-        //TODO make fields with random sizes within the maximum capacity
     }
 }
