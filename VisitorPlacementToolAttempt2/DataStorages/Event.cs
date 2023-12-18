@@ -16,4 +16,11 @@ public class Event
         this.Date = date;
         SignUpDeadline = signUpDeadline;
     }
+
+    public Event(Event eEvent){
+        this.Fields = eEvent.Fields;
+        this.MaximumCapacity = eEvent.MaximumCapacity;
+        this.Date = eEvent.Date;
+        this.SignUpDeadline = eEvent.SignUpDeadline;
+    }
 }
